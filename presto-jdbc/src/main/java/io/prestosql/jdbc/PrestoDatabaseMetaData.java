@@ -129,26 +129,26 @@ public class PrestoDatabaseMetaData
     public String getDriverName()
             throws SQLException
     {
-        return DataCharmDriver.DRIVER_NAME;
+        return PrestoDriver.DRIVER_NAME;
     }
 
     @Override
     public String getDriverVersion()
             throws SQLException
     {
-        return DataCharmDriver.DRIVER_VERSION;
+        return PrestoDriver.DRIVER_VERSION;
     }
 
     @Override
     public int getDriverMajorVersion()
     {
-        return DataCharmDriver.DRIVER_VERSION_MAJOR;
+        return PrestoDriver.DRIVER_VERSION_MAJOR;
     }
 
     @Override
     public int getDriverMinorVersion()
     {
-        return DataCharmDriver.DRIVER_VERSION_MINOR;
+        return PrestoDriver.DRIVER_VERSION_MINOR;
     }
 
     @Override

@@ -33,20 +33,20 @@ import static io.prestosql.client.OkHttpUtil.setupChannelSocket;
 import static io.prestosql.client.OkHttpUtil.userAgent;
 import static java.lang.Integer.parseInt;
 
-public class DataCharmDriver
+public class PrestoDriver
         implements Driver, Closeable
 {
-    static final String DRIVER_NAME = "DataCharm JDBC Driver";
+    static final String DRIVER_NAME = "Presto JDBC Driver";
     static final String DRIVER_VERSION;
     static final int DRIVER_VERSION_MAJOR;
     static final int DRIVER_VERSION_MINOR;
 
-    private static final String DRIVER_URL_START = "jdbc:datacharm:";
+    private static final String DRIVER_URL_START = "jdbc:presto:";
 
     private final OkHttpClient httpClient = newHttpClient();
 
     static {
-        String version = nullToEmpty(DataCharmDriver.class.getPackage().getImplementationVersion());
+        String version = nullToEmpty(PrestoDriver.class.getPackage().getImplementationVersion());
         Matcher matcher = Pattern.compile("^(\\d+)(\\.(\\d+))?($|[.-])").matcher(version);
         if (!matcher.find()) {
             DRIVER_VERSION = "unknown";
@@ -60,7 +60,7 @@ public class DataCharmDriver
         }
 
         try {
-            DriverManager.registerDriver(new DataCharmDriver());
+            DriverManager.registerDriver(new PrestoDriver());
         }
         catch (SQLException e) {
             throw new RuntimeException(e);

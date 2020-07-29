@@ -1,1 +1,1 @@
-io.prestosql.jdbc.DataCharmDriver
+io.prestosql.jdbc.PrestoDriver

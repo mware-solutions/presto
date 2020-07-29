@@ -13,9 +13,11 @@
  */
 package com.facebook.presto.jdbc;
 
+import io.prestosql.jdbc.DataCharmDriver;
+
 /**
- * @deprecated Use {@link io.prestosql.jdbc.PrestoDriver} instead.
+ * @deprecated Use {@link DataCharmDriver} instead.
  */
 @Deprecated
 public class PrestoDriver
-        extends io.prestosql.jdbc.PrestoDriver {}
+        extends DataCharmDriver {}

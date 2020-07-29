@@ -358,7 +358,7 @@ public class TestPrestoDriver
 
         try (Connection connection = createConnection()) {
             DatabaseMetaData metaData = connection.getMetaData();
-            assertEquals(metaData.getDriverName(), PrestoDriver.DRIVER_NAME);
+            assertEquals(metaData.getDriverName(), DataCharmDriver.DRIVER_NAME);
             assertEquals(metaData.getDriverVersion(), "unknown");
             assertEquals(metaData.getDriverMajorVersion(), 0);
             assertEquals(metaData.getDriverMinorVersion(), 0);

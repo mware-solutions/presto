@@ -19,7 +19,7 @@ public class TestBigConnectCloud {
 
     private Connection createConnection(String tenantId, String extra)
             throws SQLException {
-        String url = format("jdbc:presto://dsql-%s.cloud.bigconnect.io:443/bigconnect/public?%s", tenantId, extra);
+        String url = format("jdbc:datacharm://dsql-%s.cloud.bigconnect.io:443/bigconnect/public?%s", tenantId, extra);
         return DriverManager.getConnection(url, tenantId, tenantId);
     }
 

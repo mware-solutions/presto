@@ -70,12 +70,12 @@ import static org.jline.terminal.TerminalBuilder.terminal;
 import static org.jline.utils.AttributedStyle.CYAN;
 import static org.jline.utils.AttributedStyle.DEFAULT;
 
-@Command(name = "presto", description = "Presto command line interface")
+@Command(name = "datacharm", description = "DataCharm command line interface")
 public class Console
 {
     public static final Set<String> STATEMENT_DELIMITERS = ImmutableSet.of(";", "\\G");
 
-    private static final String PROMPT_NAME = "presto";
+    private static final String PROMPT_NAME = "datacharm";
     private static final Duration EXIT_DELAY = new Duration(3, SECONDS);
 
     @Inject
